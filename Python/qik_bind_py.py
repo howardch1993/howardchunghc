@@ -42,4 +42,4 @@ import time
 start = time.clock()
 qik_bind_py(outfile = 'csv')
 end = time.clock()
-print('time_use: {}'.format(end - start))
+print('time_use: {} secs'.format('%.2f' % (s2 - s1)))
