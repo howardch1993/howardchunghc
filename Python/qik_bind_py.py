@@ -37,4 +37,9 @@ def qik_bind_py(f1 = '', f2 = '', outfile = 'csv'):
         print('unsupported type of output file. run default setting...')
         qik_bind_py(f1, f2, outfile = 'csv')
 
+# calculate program run time
+import time
+start = time.clock()
 qik_bind_py(outfile = 'csv')
+end = time.clock()
+print('time_use: {}'.format(end - start))

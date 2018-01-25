@@ -1,6 +1,3 @@
-# use
-qik_bind(file1 = file.choose(), file2 = file.choose(), 'xlsx')
-
 # func
 qik_bind = function(file1, file2, output = 'csv', ...) {
     # input
@@ -23,3 +20,19 @@ qik_bind = function(file1, file2, output = 'csv', ...) {
         stop('unsupported output type.')
     }
 }
+
+# interactive
+#cat('input file1: \n')
+#f1 = readline()
+#cat('input file2: \n')
+#f2 = readline()
+#cat('choose type of output file: \n')
+#types = readline()
+#if (types == '') types = 'csv'
+
+# use
+cat('start! \n')
+a = Sys.time()
+qik_bind('D:/workflows/e0125/tbl_a.txt', 'D:/workflows/e0125/tbl_b.txt', 'csv')
+b = Sys.time()
+print(b-a)

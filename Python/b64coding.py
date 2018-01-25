@@ -1,4 +1,4 @@
-#!/usr/bin/env python3 
+#!/usr/bin/env python3
 
 # base64 python 加密/解密
 # 输入字符串，选择模式，输出字符串
