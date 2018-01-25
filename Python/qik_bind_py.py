@@ -1,14 +1,16 @@
 #!/usr/bin/env python3 
-def qik_bind_py(outfile = ''):
+def qik_bind_py(f1 = '', f2 = '', outfile = 'csv'):
 
     import pandas as pd
     import numpy as np
 
     # file_dirs
-    print('input file1: ')
-    f1 = input()
-    print('input file2: ')
-    f2 = input()
+    if f1 == '':
+        print('input file1: ')
+        f1 = input()
+    if f2 == '':
+        print('input file2: ')
+        f2 = input()
     if outfile == '':
         print('choose type of output file: ')
         outfile = input()
@@ -27,12 +29,12 @@ def qik_bind_py(outfile = ''):
 
     if outfile == 'csv':
         # outfile *.csv
-        file.to_csv(f1 + '.csv', encoding='utf-8', index = False)
+        file.to_csv(f1 + '_marked.csv', encoding='utf-8', index = False)
     elif outfile == 'xlsx':
         # outfile *.xlsx
-        file.to_excel(f1 + '.xlsx', sheet_name = 'merged', index = False)
+        file.to_excel(f1 + '_marked.xlsx', sheet_name = 'merged', index = False)
     else :
         print('unsupported type of output file. run default setting...')
-        qik_bind_py(outfile = 'csv')
+        qik_bind_py(f1, f2, outfile = 'csv')
 
-qik_bind_py()
+qik_bind_py(outfile = 'csv')
