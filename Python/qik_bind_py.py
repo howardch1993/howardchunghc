@@ -5,27 +5,28 @@ def qik_bind_py(f1 = '', f2 = '', source_in_raw = False, outfile = 'csv'):
     import numpy as np
 
     # file_dirs
-    if f1 == '':
+    if f1 == '' :
         print('input file1: ')
         f1 = input()
-    if source_in_raw == True:
-        # ctc spec
-        file = open('.txt', 'r', encoding = 'UTF-8')
-        raw = [x.rstrip('\n') for x in file]
-        file.close()
-        # 取第4行开始的第1列所有数据
-        data = [x.split('|')[0:] for x in raw[3:]]
-        # 在提取第一列数据
-        data = [x[0:1] for x in data[0:]]
-        f2 = pd.DataFrame(data)
-        del(data)
-    else :
-        print('input file2: ')
-        f2 = input()
-    if outfile == '':
+    else : pass
+	if f2 == '' :
+		print('input file2: ')
+		f2 = input()
+	else : pass
+	if source_in_raw == 1:
+		# ctc spec
+		file = open(f2, 'r', encoding = 'UTF-8')
+		raw = [x.rstrip('\n') for x in file]
+		file.close()
+		data = [x.split('|')[0:] for x in raw[3:]]
+		data = [x[0:1] for  x in data[0:]]
+		f2 = pd.DataFrame(data)
+		del(data)
+	else : pass
+	if outfile == '':
         print('choose type of output file: ')
         outfile = input()
-
+	else : pass
     # load data
     file1 = pd.read_table(f1, header = None)
     if source_in_raw == True:
@@ -58,6 +59,6 @@ def qik_bind_py(f1 = '', f2 = '', source_in_raw = False, outfile = 'csv'):
 # calculate program run time
 import time
 start = time.clock()
-qik_bind_py(outfile = 'csv')
+qik_bind_py(source_in_raw = True, outfile = 'csv')
 end = time.clock()
 print('time_use: {} secs'.format('%.2f' % (end - start)))
