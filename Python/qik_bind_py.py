@@ -9,20 +9,20 @@ def qik_bind_py(f1 = '', f2 = '', source_in_raw = False, outfile = 'csv'):
         print('input file1: ')
         f1 = input()
     else : pass
-	if f2 == '' :
-		print('input file2: ')
-		f2 = input()
-	else : pass
-	if source_in_raw == 1:
+    #if f2 == '' :
+	#	print('input file2: ')
+	#	f2 = input()
+	#else : pass
+	#if source_in_raw == 1:
 		# ctc spec
-		file = open(f2, 'r', encoding = 'UTF-8')
-		raw = [x.rstrip('\n') for x in file]
-		file.close()
-		data = [x.split('|')[0:] for x in raw[3:]]
-		data = [x[0:1] for  x in data[0:]]
-		f2 = pd.DataFrame(data)
-		del(data)
-	else : pass
+	#	file = open(f2, 'r', encoding = 'UTF-8')
+	#	raw = [x.rstrip('\n') for x in file]
+	#	file.close()
+	#	data = [x.split('|')[0:] for x in raw[3:]]
+	#	data = [x[0:1] for  x in data[0:]]
+	#	f2 = pd.DataFrame(data)
+	#	del(data)
+	#else : pass
 	if outfile == '':
         print('choose type of output file: ')
         outfile = input()
