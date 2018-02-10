@@ -17,7 +17,7 @@
 
 > Docker是一个开放源代码软件项目，让应用程序布署在软件容器下的工作可以自动化进行，借此在Linux操作系统上，提供一个额外的软件抽象层，以及操作系统层虚拟化的自动管理机制。Docker利用Linux核心中的资源分脱机制，例如cgroups，以及Linux核心名字空间，来创建独立的软件容器。[维基百科](https://zh.wikipedia.org/zh-cn/Docker_(%E8%BB%9F%E9%AB%94))
 
-## Install - 安装
+## Install & Configure - 安装配置
 
 后期主要参照该篇[文章](https://www.jianshu.com/p/14000d16915c)。
 
@@ -89,7 +89,7 @@
 6. Navicat链接
 
 
-## Using Sqlplus - 一些基本用法
+## Using Sqlplus - sqlplus一些基本用法
 
 
 
