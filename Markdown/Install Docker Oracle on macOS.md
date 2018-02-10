@@ -86,6 +86,12 @@
 
    5. 配置结束。可以用其他软件链接docker oracle，例如Navicat
 
+6. Navicat链接
+
+
+## Using Sqlplus - 一些基本用法
+
+
 
 ## References
 
