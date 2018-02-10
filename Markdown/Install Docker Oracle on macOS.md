@@ -1,6 +1,6 @@
 # Install Docker Oracle on macOS - 在macOS系统用Docker安装Oracle数据库
 
-## 背景
+## Background - 背景
 
 在非Windows系统上安装Oracle数据库，是一件比让你上刀山下火海，还要难受的事。我不是DBA，但因为一些工作需要，要在自己的Macbook上搭建Oracle数据库。
 
@@ -17,7 +17,7 @@
 
 > Docker是一个开放源代码软件项目，让应用程序布署在软件容器下的工作可以自动化进行，借此在Linux操作系统上，提供一个额外的软件抽象层，以及操作系统层虚拟化的自动管理机制。Docker利用Linux核心中的资源分脱机制，例如cgroups，以及Linux核心名字空间，来创建独立的软件容器。[维基百科](https://zh.wikipedia.org/zh-cn/Docker_(%E8%BB%9F%E9%AB%94))
 
-## 安装
+## Install - 安装
 
 后期主要参照该篇[文章](https://www.jianshu.com/p/14000d16915c)。
 
@@ -85,4 +85,31 @@
       ```
 
    5. 配置结束。可以用其他软件链接docker oracle，例如Navicat
+
+
+## References
+
+- [tools: docker: boot2docker](https://github.com/boot2docker/osx-installer/releases)
+- [tools: docker: oracle docker-images](https://github.com/oracle/docker-images/tree/master/OracleDatabase)
+- [docs: docker: guide: Docker Machin用户指南](http://liuhong1happy.lofter.com/post/1cdb27c8_60292ee)
+- [docs: docker: guide: Mac OS X 安装 Docker](http://www.widuu.com/docker/installation/mac.html)
+- [docs: docker: guide: docker-machin create](https://docs.docker-cn.com/machine/reference/create/)
+- [tools: virtualbox](https://www.virtualbox.org/wiki/Downloads)
+- [docs: docker: docker container start](https://docs.docker.com/engine/reference/commandline/container_start/)
+- [docs: docker: guide: mac os 下使用Docker安装oracle数据库（主要）](https://www.jianshu.com/p/14000d16915c)
+- [docs: centos: guide: Oracle 12c on Centos 7 安装记录](https://dotblogs.com.tw/jamesfu/2016/02/02/oracle12c_install)
+- [docs: centos: guide: Install Oracle 11G Release 2(11.2) on Centos Linux 7](http://dbaora.com/install-oracle-11g-release-2-11-2-on-centos-linux-7/)
+- [docs: linux: guide: VM虚拟机下载LINUX上安装ORACLE 11G单实例数据库](http://blog.csdn.net/haibusuanyun/article/details/12433731)
+- [docs: docker: guide: Docker中的Oracle数据库（安装）](http://blog.csdn.net/yidu_fanchen/article/details/75568748)
+- [docs: docker: guide: 在Docker中搭建Oracle数据库，并使用PL/SQL Developer链接](http://blog.csdn.net/qq_17518433/article/details/72835844)
+- [docs: docker: guide: ...Docker安装oracle并通过navicat进行登录](http://www.cnblogs.com/LiQ0116/p/6980301.html)
+- [docs: navicat: oracle: dblink: Oracle Database Links](https://www2.navicat.com/manual/online_manual/en/navicat/mac_manual/DatabaseLinksOracle.html)
+- [docs: oracle: dblink: oracle创建database link远程链接](http://blog.csdn.net/tianping168/article/details/4069975)
+- [docs: oracle: dblink: Database Link基本语法](http://zero696295.iteye.com/blog/721971)
+- [docs: oracle: guide: oracle创建数据库和用户](https://www.jianshu.com/p/9589a29f9705)
+- [docs: oracle: guide: Oracle创建表空间、创建用户以及授权、查看权限](http://blog.csdn.net/jiangxinyu/article/details/9624721)
+- [docs: oracle: guide: oracle 查看、创建、删除DBLINK](http://blog.csdn.net/home_zhang/article/details/8575668)
+- [docs: oracle: guide: Oracle/PLSQL: CREATE SCHEMA statement](https://www.techonthenet.com/oracle/schemas/create_schema_statement.php)
+- [docs: oracle: guide: Oracle 11g Express Edition - missing or invalid schema authorization identifier](https://dba.stackexchange.com/questions/160517/oracle-11g-express-edition-missing-or-invalid-schema-authorization-identifier)
+- [docs: docker: Docker--从入门到实践](https://yeasy.gitbooks.io/docker_practice/content/)
 
