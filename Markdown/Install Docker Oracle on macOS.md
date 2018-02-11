@@ -82,6 +82,9 @@
       docker exec -it a470e65045ca /bin/bash
       # sqlplus用户登录命令 sqlplus [username]/[passwd]
       sqlplus system/oracle
+
+      # 开始一个之前已经部署的容器container
+      docker container start a470e65045ca
       ```
 
    5. 配置结束。可以用其他软件链接docker oracle，例如Navicat
@@ -91,7 +94,40 @@
 
 ## Using Sqlplus - sqlplus一些基本用法
 
+```bash
+# bash
+# sqlplus用户登录命令 sqlplus [username]/[passwd]
+sqlplus system/oracle
+```
 
+```sql
+-- sqlplus
+-- 登录到其他用户
+
+connect [username]/[passwd]
+
+-- 创建用户并赋予用户权限
+create user [username] identified by [passwd];
+grant [connect | resource | dba] to [username];
+-- 删除用户及权限
+drop user [username] [cascade];
+revoke [connect | resource | dba] to [username];
+
+-- 修改用户密码
+alter user [username] identified by [passwd];
+
+```
+
+See more [here](http://blog.csdn.net/jiangxinyu/article/details/9624721).
+
+```sql
+-- 创建oracle dblink
+CREATE PUBLIC DATABASE LINK [dblink name] CONNECT TO [username] IDENTIFIED BY "[passwd]"
+USING '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST= [host ip])(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME= [sid] )))';
+-- 替换掉中括号的内容(包括中括号)，即可创建
+```
+
+See more [here](http://zero696295.iteye.com/blog/721971).
 
 ## References
 
